@@ -60,8 +60,8 @@ def AddLocation(Location):
     T = str(X)
     K = Location
     c.execute(
-        "SELECT * FROM LocationTable WHERE (L0,L1,L2,L3,L4,L5,L6) = (?,?,?,?,?,?,?,)"(K.L[0], K.L[1], K.L[2], K.L[3],
-                                                                                      K.L[4], K.L[5], K.L[6], ))
+        "SELECT * FROM LocationTable WHERE (L0,L1,L2,L3,L4,L5,L6) = (?,?,?,?,?,?,?,)"(K.L[0], K.L[1], K.L[2],
+            K.L[3], K.L[4], K.L[5], K.L[6], ))
     if c.fetchone() is not None:
         print('Error. Location already exists')
     else:
@@ -181,34 +181,3 @@ def run():
     app = QtWidgets.QApplication(sys.argv)
     GUI = Window()
     sys.exit(app.exec_())
-
-
-# Execution
-conn = s.connect('PhysicsDatabase.db')
-c = conn.cursor()
-
-# run()
-
-
-D = Location
-D.L = ['2', 'B', 'Other Box', '1', '-', '-', '-']
-
-# SearchByItemName('Inventory', 'Oscilloscope')
-
-# CreateInventoryTable('Inventory')
-# CreateLocationTable('LocationTable')
-# CreateQuantityTable('QuantityTable')
-AddItemToInventory('Hammer', 'Hammer')
-AddLocation(D)
-# SearchByItemName('Inventory', 'Oscilloscope')
-
-# CreateOrAddQuantity(4593003696, 4593003440, 5)
-
-# ChangeQuantityOfItemAtLocation()
-
-# app = DatabaseApp()
-# app.mainloop()
-
-# root.mainloop()
-
-conn.close()
