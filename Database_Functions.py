@@ -1,3 +1,13 @@
+<<<<<<< HEAD:Database_Functions.py
+=======
+import sqlite3 as s
+import sys
+import random
+
+from PyQt5 import QtGui
+from PyQt5 import QtWidgets
+
+>>>>>>> 9aaddf3e561a7cfb8d1214288a334329393bef9f:MultiTableLabDatabase.py
 # Item classes and Functions
 
 # Location is a Array of Strings for the location of the item

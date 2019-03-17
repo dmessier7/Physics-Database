@@ -1,22 +1,21 @@
+import Database_Functions as d
 
-import MultiTableLabDatabase as m
-
-conn = m.s.connect('PhysicsDatabase.db')
-m.c = conn.cursor()
+conn = d.s.connect('PhysicsDatabase.db')
+d.c = conn.cursor()
 
 # run()
 
 
-g = m.Location
+g = d.Location
 g.L = ['2', 'B', 'Other Box', '1', '-', '-', '-']
 
 # SearchByItemName('Inventory', 'Oscilloscope')
 
-m.CreateInventoryTable('Inventory')
-m.CreateLocationTable('LocationTable')
-m.CreateQuantityTable('QuantityTable')
-m.AddItemToInventory('Hammer', 'Hammer')
-m.AddLocation(g)
+d.CreateInventoryTable('Inventory')
+d.CreateLocationTable('LocationTable')
+d.CreateQuantityTable('QuantityTable')
+d.AddItemToInventory('Hammer', 'Hammer')
+d.AddLocation(g)
 # SearchByItemName('Inventory', 'Oscilloscope')
 
 # CreateOrAddQuantity(4593003696, 4593003440, 5)
