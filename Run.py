@@ -12,9 +12,9 @@ g.L = ['2', 'B', 'Other Box', '1', '-', '-', '-']
 
 # SearchByItemName('Inventory', 'Oscilloscope')
 
-# CreateInventoryTable('Inventory')
-# CreateLocationTable('LocationTable')
-# CreateQuantityTable('QuantityTable')
+m.CreateInventoryTable('Inventory')
+m.CreateLocationTable('LocationTable')
+m.CreateQuantityTable('QuantityTable')
 m.AddItemToInventory('Hammer', 'Hammer')
 m.AddLocation(g)
 # SearchByItemName('Inventory', 'Oscilloscope')
