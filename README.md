@@ -6,28 +6,32 @@ An interface for use by the lab techs and lab assistants to keep track of invent
 
 The progam will be written in python, using the sqlite library to create, manage, and pull from the database(s). What will be used for the GUI isn't super concrete. Right now I'm using PyQt5 which isn't amazing, so something else might work better. tKinter wasn't used because of limitations on the placement and style.
 
-## Funcationality Requirements:  
-Main Menu  
-* Class List :Phys 250, Phys 270, etc. (each opens up their Class tab)  
-        Search  for Item (gives Item tab)  
-             Should show similar Items while you type in the name of the new one,  
-                because it only stops against exact name dublicates  
+## Funcationality Requirements:
+My idea for the GUI is a window with the main menu on the side at all times taking up ~1/4 of the window, and a space for tabs taking up the other 3/4 of window. Tabs are similar to tabs on an internet browser.
+
+Main Menu:  
+Top   
 * Lab List  
 * Item List  
-* Add Item (adds Item to the Item Database)  
-             Should show similar Items while you type in the name of the new one,  
-                because it only stops against exact name dublicates</br>
-* Search for Lab (gives Lab Tab)  
-* Add Lab (add Lab to Lab Database)  
-* Add Class (adds Class to Class Database)
-
-Class List Tab (eg Phys 250)  
-* Class Name
+* Quick Search
+Bottom
+* Class List in Numerical order, with the ability to click on each for their respective Class Tab
+* Add Class Button (Opens the Add Class Tab)
 
 Lab List Tab: Free Fall, Projectile Motion, etc (each opens up their Lab tab)
-Item List Tab:
-Add Item Tab:
-Sea
+* List of Labs by Category, with the ability to click on each for their respective Lab tab
+* Search Bar (edits List to show the closest matches)
+* Add Lab Button (Opens the Add Lab Tab)  
+
+Item List Tab: 
+* List of 
+* Add Item Button (Opens the Add Item Button)
+
+Quick Search:
+
+
+Class Tab
+
 Lab Tab (eg Projectile Motion, Ohm's Law)  
         Lab Name  
         Equipment Table, with each row:  
@@ -38,7 +42,8 @@ Lab Tab (eg Projectile Motion, Ohm's Law)
         Lab Pictures  
         Lab Description  
         List of Classes this Lab is in  
-    Item tab  
+        
+Item tab  
         Item Name  
         Item Quantity  
         Item Location (Edits location in all Lab Tabs that contain that Item)  
