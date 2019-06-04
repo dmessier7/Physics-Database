@@ -14,6 +14,7 @@ Top
 * Lab List  
 * Item List  
 * Quick Search
+
 Bottom
 * Class List in Numerical order, with the ability to click on each for their respective Class Tab
 * Add Class Button (Opens the Add Class Tab)
