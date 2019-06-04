@@ -8,20 +8,20 @@ The progam will be written in python, using the sqlite library to create, manage
 
 ## Funcationality Requirements:  
 Main Menu  
-        Class List :Phys 250, Phys 270, etc. (each opens up their Class tab)  
+        * Class List :Phys 250, Phys 270, etc. (each opens up their Class tab)  
         Search  for Item (gives Item tab)  
              -Should show similar Items while you type in the name of the new one,  
                 because it only stops against exact name dublicates  
-        Lab List  
-        Item List  
-        Add Item (adds Item to the Item Database)  
+        * Lab List  
+        * Item List  
+        * Add Item (adds Item to the Item Database)  
              -Should show similar Items while you type in the name of the new one,  
                 because it only stops against exact name dublicates</br>
-        Search for Lab (gives Lab Tab)  
-        Add Lab (add Lab to Lab Database)  
-        Add Class (adds Class to Class Database)
+        * Search for Lab (gives Lab Tab)  
+        * Add Lab (add Lab to Lab Database)  
+        * Add Class (adds Class to Class Database)
 
-Class Tab (eg Phys 250)  
+Class ListTab (eg Phys 250)  
 Class Name
 
 Lab List: Free Fall, Projectile Motion, etc (each opens up their Lab tab)  
