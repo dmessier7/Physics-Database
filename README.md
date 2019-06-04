@@ -8,24 +8,27 @@ The progam will be written in python, using the sqlite library to create, manage
 
 ## Funcationality Requirements:  
 Main Menu  
-        * Class List :Phys 250, Phys 270, etc. (each opens up their Class tab)  
+* Class List :Phys 250, Phys 270, etc. (each opens up their Class tab)  
         Search  for Item (gives Item tab)  
-             -Should show similar Items while you type in the name of the new one,  
+             Should show similar Items while you type in the name of the new one,  
                 because it only stops against exact name dublicates  
-        * Lab List  
-        * Item List  
-        * Add Item (adds Item to the Item Database)  
-             -Should show similar Items while you type in the name of the new one,  
+* Lab List  
+* Item List  
+* Add Item (adds Item to the Item Database)  
+             Should show similar Items while you type in the name of the new one,  
                 because it only stops against exact name dublicates</br>
-        * Search for Lab (gives Lab Tab)  
-        * Add Lab (add Lab to Lab Database)  
-        * Add Class (adds Class to Class Database)
+* Search for Lab (gives Lab Tab)  
+* Add Lab (add Lab to Lab Database)  
+* Add Class (adds Class to Class Database)
 
-Class ListTab (eg Phys 250)  
-Class Name
+Class List Tab (eg Phys 250)  
+* Class Name
 
-Lab List: Free Fall, Projectile Motion, etc (each opens up their Lab tab)  
-    Lab Tab (eg Projectile Motion, Ohm's Law)  
+Lab List Tab: Free Fall, Projectile Motion, etc (each opens up their Lab tab)
+Item List Tab:
+Add Item Tab:
+Sea
+Lab Tab (eg Projectile Motion, Ohm's Law)  
         Lab Name  
         Equipment Table, with each row:  
             Number of this item thats required for a table  
@@ -43,28 +46,26 @@ Lab List: Free Fall, Projectile Motion, etc (each opens up their Lab tab)
         Pictures  
 
 
-Database Structure and Programming:
+## Database Structure and Programming:
 
 Three General Rules for Databases
-<ol>
-    <li>No Repeating Groups</li>
-    <li>Data Dependancy on Key</li>
-    <li>No Redundant Data</li>
-</ol>
+1. No Repeating Groups  
+2. Data Dependancy on Key  
+3. No Redundant Data  
 
-<p>There are three main Tables for Inventory</br>
-  InventoryTable</br>
-    Item ID | str Name | str Description</br>
-  LocationTable</br>
-    LocationID | str L0 | str L1 | str L2 | str L3 | str L4 | str L5</br>
-  QuantityTable</br>
-    ItemID | LocationID | int Quantity<p>
+There are three main Tables for Inventory  
+  InventoryTable  
+    Item ID | str Name | str Description  
+  LocationTable  
+    LocationID | str L0 | str L1 | str L2 | str L3 | str L4 | str L5  
+  QuantityTable  
+    ItemID | LocationID | int Quantity  
 
-<p>Tables for Classes and Labs</br>
-  Classes (e.g. PHYS 250, PHYS 210)</br>
-    Class ID | str ClassName</br>
-  Labs (e.g. Projectile Motion, RC Circuits)</br>
-    Lab ID | str LabName</br>
-  Matches</br>
-    Class ID | Lab ID</br>
+Tables for Classes and Labs  
+  Classes (e.g. PHYS 250, PHYS 210)  
+    Class ID | str ClassName  
+  Labs (e.g. Projectile Motion, RC Circuits)  
+    Lab ID | str LabName  
+  Matches  
+    Class ID | Lab ID  
 
