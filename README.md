@@ -25,31 +25,32 @@ Lab List Tab: Free Fall, Projectile Motion, etc (each opens up their Lab tab)
 * Add Lab Button (Opens the Add Lab Tab)  
 
 Item List Tab: 
-* List of 
+* List of Items by Alphabetical Order, with the ability to click on each for their respective Item tab
 * Add Item Button (Opens the Add Item Button)
 
 Quick Search:
 
 
-Class Tab
+Class Tab:
 
-Lab Tab (eg Projectile Motion, Ohm's Law)  
-        Lab Name  
-        Equipment Table, with each row:  
-            Number of this item thats required for a table  
-            Item (Opens up to Item tab)  
-            Location of Item  
-            Quantity of Item  
-        Lab Pictures  
-        Lab Description  
-        List of Classes this Lab is in  
+Lab Tab: (eg Projectile Motion, Ohm's Law)  
+* Lab Name
+* Lab Category
+* Equipment Table, with each row:  
+        * Number of this item thats required for a table  
+        * Item (Opens up to Item tab)  
+        * Location of Item  
+        * Quantity of Item  
+* Lab Pictures  
+* Lab Description  
+* List of Classes this Lab is in  
         
-Item tab  
-        Item Name  
-        Item Quantity  
-        Item Location (Edits location in all Lab Tabs that contain that Item)  
-        Item Description  
-        Pictures  
+Item tab:  
+* Item Name  
+* Item Quantity  
+* Item Location (Edits location in all Lab Tabs that contain that Item)  
+* Item Description  
+* Pictures  
 
 
 ## Database Structure and Programming:
@@ -60,18 +61,13 @@ Three General Rules for Databases
 3. No Redundant Data  
 
 There are three main Tables for Inventory  
-  InventoryTable  
-    Item ID | str Name | str Description  
-  LocationTable  
-    LocationID | str L0 | str L1 | str L2 | str L3 | str L4 | str L5  
-  QuantityTable  
-    ItemID | LocationID | int Quantity  
+1. InventoryTable: Item ID | str Name | str Description  
+2. LocationTable: LocationID | str L0 | str L1 | str L2 | str L3 | str L4 | str L5  
+3. QuantityTable: ItemID | LocationID | int Quantity  
 
 Tables for Classes and Labs  
-  Classes (e.g. PHYS 250, PHYS 210)  
-    Class ID | str ClassName  
-  Labs (e.g. Projectile Motion, RC Circuits)  
-    Lab ID | str LabName  
-  Matches  
-    Class ID | Lab ID  
+* Classes: Class ID | str ClassName  
+* Labs: Lab ID | str LabName  
+* ClassLab: Class ID | Lab ID
+* LabItems: Lab ID | Item ID
 
