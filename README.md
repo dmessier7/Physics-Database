@@ -5,46 +5,46 @@ Objective: An interface for use by the lab techs and lab assistants to keep trac
 
 The progam will be written in python, using the sqlite library to create, manage, and pull from the database(s). What will be used for the GUI isn't super concrete. Right now I'm using PyQt5 which isn't amazing, so something else might work better. tKinter wasn't used because of limitations on the placement and style.
 
-<p>Funcationality Requirements:</br>
-    Main Menu</br>
-        Class List :Phys 250, Phys 270, etc. (each opens up their Class tab)</br>
-        Search  for Item (gives Item tab)</br>
-             -Should show similar Items while you type in the name of the new one,</br>
+Funcationality Requirements:  
+    Main Menu  
+        Class List :Phys 250, Phys 270, etc. (each opens up their Class tab)  
+        Search  for Item (gives Item tab)  
+             -Should show similar Items while you type in the name of the new one,  
+                because it only stops against exact name dublicates  
+        Lab List  
+        Item List  
+        Add Item (adds Item to the Item Database)  
+             -Should show similar Items while you type in the name of the new one,  
                 because it only stops against exact name dublicates</br>
-        Lab List</br>
-        Item List</br>
-        Add Item (adds Item to the Item Database)</br>
-             -Should show similar Items while you type in the name of the new one,</br>
-                because it only stops against exact name dublicates</br>
-        Search for Lab (gives Lab Tab)</br>
-        Add Lab (add Lab to Lab Database)</br>
-        Add Class (adds Class to Class Database)</p>
-        
-    Class Tab (eg Phys 250)</br>
-        Class Name</br>
+        Search for Lab (gives Lab Tab)  
+        Add Lab (add Lab to Lab Database)  
+        Add Class (adds Class to Class Database)
 
-        Lab List: Free Fall, Projectile Motion, etc (each opens up their Lab tab)</br>
-    Lab Tab (eg Projectile Motion, Ohm's Law)</br>
-        Lab Name</br>
-        Equipment Table, with each row:</br>
-            Number of this item thats required for a table</br>
-            Item (Opens up to Item tab)</br>
-            Location of Item</br>
-            Quantity of Item</br>
-        Lab Pictures</br>
-        Lab Description</br>
-        List of Classes this Lab is in</br>
-    Item tab</br>
-        Item Name</br>
-        Item Quantity</br>
-        Item Location (Edits location in all Lab Tabs that contain that Item)</br>
-        Item Description</br>
-        Pictures</p>
+Class Tab (eg Phys 250)  
+Class Name
+
+Lab List: Free Fall, Projectile Motion, etc (each opens up their Lab tab)  
+    Lab Tab (eg Projectile Motion, Ohm's Law)  
+        Lab Name  
+        Equipment Table, with each row:  
+            Number of this item thats required for a table  
+            Item (Opens up to Item tab)  
+            Location of Item  
+            Quantity of Item  
+        Lab Pictures  
+        Lab Description  
+        List of Classes this Lab is in  
+    Item tab  
+        Item Name  
+        Item Quantity  
+        Item Location (Edits location in all Lab Tabs that contain that Item)  
+        Item Description  
+        Pictures  
 
 
 Database Structure and Programming:
 
-<p>Three General Rules for Databases</p>
+Three General Rules for Databases
 <ol>
     <li>No Repeating Groups</li>
     <li>Data Dependancy on Key</li>
