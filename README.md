@@ -60,14 +60,17 @@ Three General Rules for Databases
 2. Data Dependancy on Key  
 3. No Redundant Data  
 
-There are three main Tables for Inventory  
-1. InventoryTable: Item ID | str Name | str Description  
-2. LocationTable: LocationID | str L0 | str L1 | str L2 | str L3 | str L4 | str L5  
-3. QuantityTable: ItemID | LocationID | int Quantity  
+Tables for Inventory  
+* InventoryTable: Item ID | str Name | str Description  
+* LocationTable: LocationID | str L0 | str L1 | str L2 | str L3 | str L4 | str L5  
+* QuantityTable: ItemID | LocationID | int Quantity  
 
-Tables for Classes and Labs  
+Tables for Class and Lab Management 
 * Classes: Class ID | str ClassName  
 * Labs: Lab ID | str LabName  
 * ClassLab: Class ID | Lab ID
 * LabItems: Lab ID | Item ID
 
+Random Tables
+* LabPics: Lab ID | Picture Link?
+* ItemPics: Item ID | Picture Link?
