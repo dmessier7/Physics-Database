@@ -4,15 +4,20 @@ Database Program for Physics and Engineering Inventory
 ## Objective:   
 An interface for use by the lab techs and lab assistants to keep track of inventory, see the items required for lab set ups, and help ensure there's enough of what's need for set ups. At first this will be localized to one computer, but hopefully eventually we can connect it to the lab's cloud file storage to allow multiple computers to use and edit the system.
 
-The progam will be written in python, using the sqlite library to create, manage, and pull from the database(s). What will be used for the GUI isn't super concrete. Right now I'm using PyQt5 which isn't amazing, so something else might work better. tKinter wasn't used because of limitations on the placement and style.
+The progam will be written in python, using the SQLite3 library to create, manage, and pull from the database(s). This means managing the databases is done by writing python functions which executes SQL commands. What will be used for the GUI isn't super concrete. Right now I'm using PyQt5 which isn't amazing, so something else might work better. tKinter wasn't used because of limitations on the placement and style.
 
 ## Funcationality Requirements:
-My idea for the GUI is a window with the main menu on the side at all times taking up ~1/4 of the window, and a space for tabs taking up the other 3/4 of window. Tabs are similar to tabs on an internet browser.
+My idea for the GUI is a window with the main menu on the side at all times taking up ~1/4 of the window, and a space for tabs taking up the other 3/4 of window. Tabs are similar to tabs on an internet browser.  
+Some Notes
+* Classes (e.g PHYS 250, PHYS 220), Lab (Free Fall, Vector Forces), Items (Oscilloscope, Ruler).
+* Locations are 6 strings are follow a hierarchy completely up to the people using the program. We'll need to write down some guidelines.
+* I hope that eventually we can incorporate a calendar interface to organize labs
 
 Main Menu:  
 Top   
 * Lab List  
-* Item List  
+* Item List
+* Location List
 * Quick Search
 
 Bottom
@@ -28,12 +33,15 @@ Item List Tab:
 * List of Items by Alphabetical Order, with the ability to click on each for their respective Item tab
 * Add Item Button (Opens the Add Item Button)
 
-Quick Search:
+Quick Search:  
+Should be a little search bar that search the names of Lab, Items, Classes, and maybe Locations 
 
 
 Class Tab:
+* Class Name
+* List of Labs that Class covers in general order (the order of labs and the labs covered varies slightly each semester, hopefully when the calendar feature is implimented it can reflect that)
 
-Lab Tab: (eg Projectile Motion, Ohm's Law)  
+Lab Tab:  
 * Lab Name
 * Lab Category
 * Equipment Table, with each row:  
@@ -61,15 +69,15 @@ Three General Rules for Databases
 3. No Redundant Data  
 
 Tables for Inventory  
-* InventoryTable: Item ID | str Name | str Description  
+* Inventory: Item ID | str Name | str Description  
 * LocationTable: LocationID | str L0 | str L1 | str L2 | str L3 | str L4 | str L5  
 * QuantityTable: ItemID | LocationID | int Quantity  
 
 Tables for Class and Lab Management 
-* Classes: Class ID | str ClassName  
-* Labs: Lab ID | str LabName  
-* ClassLab: Class ID | Lab ID
-* LabItems: Lab ID | Item ID
+* ClassTable: Class ID | str ClassName  
+* LabTable: Lab ID | str LabName  
+* ClassLabTable: Class ID | Lab ID
+* LabItemsTable: Lab ID | Item ID
 
 Random Tables
 * LabPics: Lab ID | Picture Link?
