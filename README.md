@@ -77,7 +77,7 @@ Tables for Class and Lab Management
 * ClassTable: ClassID | ClassName  
 * LabTable: LabID | LabName  
 * ClassLabTable: ClassID | LabID
-* LabItemsTable: LabID | ItemID | NumPerTable
+* LabItemsTable: LabID | ItemID | NumPerTable | Num
 * ExtrasTable: LabID | ItemID  (For items to be left on extra table)
 
 Random Tables
