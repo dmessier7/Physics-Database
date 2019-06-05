@@ -1,30 +1,32 @@
 import Database_Functions as d
-
-conn = d.s.connect('PhysicsDatabase.db')
-d.c = conn.cursor()
-
-# run()
-
+#import GUI_Functions.py
+import sqlite3 as s
 
 g = d.Location
 g.L = ['2', 'B', 'Other Box', '1', '-', '-', '-']
 
 # SearchByItemName('Inventory', 'Oscilloscope')
 
-d.CreateInventoryTable('Inventory')
-d.CreateLocationTable('LocationTable')
-d.CreateQuantityTable('QuantityTable')
-d.AddItemToInventory('Hammer', 'Hammer')
-d.AddLocation(g)
+
+#d.CreateInventoryTable()
+#d.CreateLocationTable()
+#d.CreateQuantityTable()
+#d.AddItemToInventory('Hammer', 'Hammer', 1)
+#d.AddLocation(g)
+#d.CreateClassTable()
+#d.AddClass("PHYS250")
+#d.CreateLabTable()
+#d.AddLab("Free Fall", "Looking at Gravity")
+#d.CreateClassLabTable()
+d.SearchIDByName("LabTable", "Free Fall")
+
+
 # SearchByItemName('Inventory', 'Oscilloscope')
-
-# CreateOrAddQuantity(4593003696, 4593003440, 5)
-
 # ChangeQuantityOfItemAtLocation()
 
-# app = DatabaseApp()
-# app.mainloop()
+#app = DatabaseApp()
+#app.mainloop()
 
-# root.mainloop()
+#root.mainloop()
 
-conn.close()
+d.conn.close()

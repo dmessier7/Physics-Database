@@ -1,6 +1,8 @@
-'''
+import sys
+import random
 
-'''
+from PyQt5 import QtGui
+from PyQt5 import QtWidgets
 
 class Window(QtWidgets.QMainWindow):
 
