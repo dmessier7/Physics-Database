@@ -69,16 +69,17 @@ Three General Rules for Databases
 3. No Redundant Data  
 
 Tables for Inventory  
-* Inventory: Item ID | str Name | str Description  
-* LocationTable: LocationID | str L0 | str L1 | str L2 | str L3 | str L4 | str L5  
-* QuantityTable: ItemID | LocationID | int Quantity  
+* Inventory: Item ID | Name | Description  
+* LocationTable: LocationID | L0 | L1 | L2 | L3 | L4 | L5  
+* QuantityTable: ItemID | LocationID | Quantity  
 
 Tables for Class and Lab Management 
-* ClassTable: Class ID | str ClassName  
-* LabTable: Lab ID | str LabName  
-* ClassLabTable: Class ID | Lab ID
-* LabItemsTable: Lab ID | Item ID
+* ClassTable: ClassID | ClassName  
+* LabTable: LabID | LabName  
+* ClassLabTable: ClassID | LabID
+* LabItemsTable: LabID | ItemID | NumPerTable
+* ExtrasTable: LabID | ItemID  (For items to be left on extra table)
 
 Random Tables
-* LabPics: Lab ID | Picture Link?
-* ItemPics: Item ID | Picture Link?
+* LabPics: LabID | Picture Link?
+* ItemPics: ItemID | Picture Link?
