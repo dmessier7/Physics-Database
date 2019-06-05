@@ -6,7 +6,7 @@ An interface for use by the lab techs and lab assistants to keep track of invent
 
 The progam will be written in python, using the SQLite3 library to create, manage, and pull from the database(s). This means managing the databases is done by writing python functions which executes SQL commands. What will be used for the GUI isn't super concrete. Right now I'm using PyQt5 which isn't amazing, so something else might work better. tKinter wasn't used because of limitations on the placement and style.
 
-## Funcationality Requirements:
+## Functionality Requirements:
 My idea for the GUI is a window with the main menu on the side at all times taking up ~1/4 of the window, and a space for tabs taking up the other 3/4 of window. Tabs are similar to tabs on an internet browser.  
 Some Notes
 * Classes (e.g PHYS 250, PHYS 220), Lab (Free Fall, Vector Forces), Items (Oscilloscope, Ruler).
