@@ -1,5 +1,4 @@
 import sys
-import random
 
 from PyQt5 import QtGui
 from PyQt5 import QtWidgets
@@ -28,11 +27,6 @@ class Window(QtWidgets.QMainWindow):
         self.tabs = QtWidgets.QTabWidget()
         self.tabs.resize(300, 200)
 
-        self.tab1 = QtWidgets.QWidget()
-        self.tabs.addTab(self.tab1, "Tab 1")
-        self.tab2 = QtWidgets.QWidget()
-        self.tabs.addTab(self.tab2, "Tab 2")
-
         self.centralwidget = self
         self.frame = QtWidgets.QFrame(self.centralwidget)
         self.frame.setGeometry(0, 0, 150, 600)
@@ -44,27 +38,41 @@ class Window(QtWidgets.QMainWindow):
         extractAction.setStatusTip("Leave the App")
         extractAction.triggered.connect(self.close_application)
 
-        mainMenu = self.menuBar()
-        fileMenu = mainMenu.addMenu('File')
-        toolsMenu = mainMenu.addMenu('Tools')
-        helpMenu = mainMenu.addMenu('Help')
-
+        Tbtn = QtWidgets.QCommandLinkButton("Tabs", self)
+        Tbtn.clicked.connect(self.close_application)
+        Tbtn.move(10, 20)
+        
         self.home()
 
     def home(self):
-        btn = QtWidgets.QPushButton("Quit", self)
-        btn.clicked.connect(self.close_application)
-        # btn.resize()
-        btn.move(700, 550)
-
+        qbtn = QtWidgets.QPushButton("Quit", self)
+        qbtn.clicked.connect(self.close_application)
+        qbtn.move(700, 550)
         self.show()
 
     def close_application(self):
         print("Closed")
         sys.exit()
 
+class Tab(QtWidgets.QTabWidget, Name):
+   def __init__(self, parent = None):
+      super(Tab, self).__init__(parent)
+      self.tab1 = QtWidgets.QWidget()
+
+      self.addTab(self.tab1,"Tab 1")
+      self.tab1UI()
+      self.setWindowTitle("Tab")
+
+   def tab1UI(self):
+      layout = QtWidgets.QFormLayout()
+      layout.addRow("Name", QtWidgets.QLineEdit())
+      layout.addRow("Address",QtWidgets.QLineEdit())
+      self.setTabText(0,"Contact Details")
+      self.tab1.setLayout(layout)
 
 def run():
     app = QtWidgets.QApplication(sys.argv)
+    ex = Tab()
+    ex.show()
     GUI = Window()
     sys.exit(app.exec_())
